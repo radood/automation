@@ -95,13 +95,13 @@ public class AddNewOwnerPageTest {
 
         //Click the Add Owner button
         List<WebElement> addOwnerButton = driver.findElements(By.xpath("//*[@id=\"add-owner-form\"]/div[2]/div/button"));
-        //addOwnerButton.get(0).click();
+        addOwnerButton.get(0).click();
     }
 
  @After
     public void teardown() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } 
         catch(InterruptedException e){
              // this part is executed when an exception (in this example InterruptedException) occurs

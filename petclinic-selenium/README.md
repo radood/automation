@@ -79,6 +79,11 @@ On Errorpage:
 * Input a large number of owners and pets to see if performance of page/database is affected
 * Editing the same field for the same owner on different machines/browsers
 
+## Small demo that shows the tests do work
+
+![Alt text](/out.gif?raw=true)
+
+
 ## Bugs found:
 
 * Create new pet page button says "update pet" instead of "add new pet".

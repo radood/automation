@@ -84,14 +84,14 @@ public class AddNewPetPageTest {
 
         //Click add new pet button
         List<WebElement> addPetButton = driver.findElements(By.xpath("/html/body/div/div/form/div[2]/div/button"));
-        //addPetButton.get(0).click();
+        addPetButton.get(0).click();
     }
 
     @After
     public void teardown() throws IOException {
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } 
         catch(InterruptedException e){
              // this part is executed when an exception (in this example InterruptedException) occurs
