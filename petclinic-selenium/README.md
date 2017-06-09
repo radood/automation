@@ -70,6 +70,15 @@ On Errorpage:
 
 * The errorpage displays and returns a 500 error response.
 
+### Non Happy/Critical path: 
+(Which will not be implemented as automation tests since it was not in requirements)
+
+* Try all the imput fields with a multitude of inputs ranging from caps, numbers, symbols, malicious html etc.
+* Stop the server midway through a request of creating an owner or a pet
+* Try breaking the search field with options related on unrelated to the given data
+* Input a large number of owners and pets to see if performance of page/database is affected
+* Editing the same field for the same owner on different machines/browsers
+
 ## Bugs found:
 
 * Create new pet page button says "update pet" instead of "add new pet".
