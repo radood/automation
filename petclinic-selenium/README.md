@@ -81,7 +81,7 @@ On Errorpage:
 
 ## Small demo that shows the tests do work
 
-![Alt text](/out.gif?raw=true)
+![Test demo](/petclinic-selenium/out.gif?raw=true)
 
 
 ## Bugs found:
