@@ -30,17 +30,49 @@ On Find Owners page:
 * Clicking the find owner button with one exsisting last name returns that owner's profile.
 * Clicking the find owner button with multiple exsisting last names returns a list of all the owners and their details under that name.
 * Clicking on one of the owners from the list expands to that owners profile with complete details.
+* Clicking the add new owner button takes you to the add new owner page.
 
 On the Owner Profile page:
 
-
 * Clicking edit owner takes you to the owner editing page and any of the fields can be updated.
-* Clicking add new pet takes you to the pet creation page
-* Clicking edit pet takes you to the pet editing page
-* Clicking add visit takes you to the visit creation page
+* Clicking add new pet takes you to the pet creation page.
+* Clicking edit pet takes you to the pet editing page and any of the fields can be updated.
+* Clicking add visit takes you to the visit creation page.
 
+On the Add New Owner page:
+
+* The First Name field can be successfully filled without any errors.
+* The Last Name field can be successfully filled without any errors.
+* The Address field can be successfully filled without any errors.
+* The City field can be successfully filled without any errors.
+* The Telephone field can be successfully filled with only numeric characters and without any errors.
+* Clicking the add new owner button creates a new owner provided all the above fields are filled correctly.
+
+On the Add New Pet page:
+
+* Name field can be successfully filled without any errors.
+* Birthday field can be successfully filled without any errors.
+* Each of the 6 pet types from the dropdown are valid inputs.
+
+On the Visit Creation page:
+
+* The date field can be successfully filled without any errors.
+* The description field can be successfully filled without any errors.
+* Clicking add visit successfuly adds a visit for that specific pet.
+
+On the Veterinarians page:
+
+* A list of all the veterenarians and their specialties is displayed.
+* The list can be viewed as JSON.
+* The list can be viewed as XML.
+
+On Errorpage:
+
+* The errorpage displays and returns a 500 error response.
 
 ## Bugs found:
 
 * Create new pet page button says update pet instead of add new pet.
-* Telephone field empty error is not caught/user friendly: "numeric value out of bounds (<10 digits>.<0 digits> expected)" 
+* Telephone field empty error is not caught/user friendly: "numeric value out of bounds (<10 digits>.<0 digits> expected)".
+* The valid date format is unclear. It requires exactly the format 2010/09/07 but the user is not told this anywhere or in the error message.
+* On the veterenarians page. "View as XMLView as JSON" are right next to each other without any spaces.
