@@ -1,1 +1,4 @@
 /home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/FindOwnersPageTest.java
+/home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/AddNewPetPageTest.java
+/home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/OwnerProfilePageTest.java
+/home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/AddNewOwnerPageTest.java

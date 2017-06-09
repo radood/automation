@@ -19,10 +19,12 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-public class FindOwnersPageTest {
+public class AddNewPetPageTest {
 
     private String testUrl;
     private WebDriver driver;
+    private String name;
+    private String birthDate;
 
     @Before
     public void prepare() {
@@ -48,57 +50,46 @@ public class FindOwnersPageTest {
         List<WebElement> searchTab = driver.findElements(By.xpath("//*[@id=\"main-navbar\"]/ul/li[3]/a/span[2]"));
          //Click the selected tab button
         searchTab.get(0).click();
-    }
-
-    @Test
-    public void testShowAllOwners() {
-
         //Go to the Find owner button using xpath
         List<WebElement> searchButton = driver.findElements(By.xpath("//*[@id=\"search-owner-form\"]/div[2]/div/button"));
         //Click the Find owner search button
         searchButton.get(0).click();
-    }
+        //Find the first owner using xpath
+        List<WebElement> firstOwner = driver.findElements(By.xpath("//*[@id=\"vets\"]/tbody/tr[1]/td[1]/a"));
+         //Click the first owner
+        firstOwner.get(0).click();
 
-    @Test
-    public void testFindOneOwner() {
-
-        //Go to Input field using class name
-        List<WebElement> searchInput = driver.findElements(By.className("form-control"));
-        //Type a last name that has only one owner
-        searchInput.get(0).sendKeys("Franklin");
-
-        //Go to the Find owner button using xpath
-        List<WebElement> searchButton = driver.findElements(By.xpath("//*[@id=\"search-owner-form\"]/div[2]/div/button"));
-        //Click the Find owner search button
-        searchButton.get(0).click();
-    }
-
-    @Test
-    public void testFindMultipleOwners() {
-
-        //Go to Input field using class name
-        List<WebElement> searchInput = driver.findElements(By.className("form-control"));
-        //Type a last name that has multiple owners
-        searchInput.get(0).sendKeys("Davis");
-
-        //Go to the Find owner button using xpath
-        List<WebElement> searchButton = driver.findElements(By.xpath("//*[@id=\"search-owner-form\"]/div[2]/div/button"));
-        //Click the Find owner search button
-        searchButton.get(0).click();
+        List<WebElement> addNewPetButton = driver.findElements(By.xpath("/html/body/div/div/a[2]"));
+         //Click the add new pet button
+        addNewPetButton.get(0).click();
 
     }
 
     @Test
-    public void clickAddNewOwner() {
+    public void testCreateNewPetForOwner() {
+        
+        name = "Test Pet name";
+        birthDate = "2010/09/07";
 
-        //Find the add new owner button
-        List<WebElement>  addOwnerButton = driver.findElements(By.xpath("/html/body/div/div/a"));
-        //Click the button
-        addOwnerButton.get(0).click();
+        //Fill up each of the text fields
+        List<WebElement> nameField = driver.findElements(By.xpath("//*[@id=\"name\"]"));
+        nameField.get(0).sendKeys(name);
+
+        List<WebElement> birthDateField = driver.findElements(By.xpath("//*[@id=\"birthDate\"]"));
+        birthDateField.get(0).sendKeys(birthDate);
+        
+        //Choose the first type element
+        List<WebElement> typeField = driver.findElements(By.xpath("//*[@id=\"type\"]/option[1]"));
+        birthDateField.get(0).click();
+
+        //Click add new pet button
+        List<WebElement> addPetButton = driver.findElements(By.xpath("/html/body/div/div/form/div[2]/div/button"));
+        //addPetButton.get(0).click();
     }
 
     @After
-    public void teardown() {
+    public void teardown() throws IOException {
+
         try {
             Thread.sleep(1000);
         } 
@@ -107,5 +98,4 @@ public class FindOwnersPageTest {
         }
         driver.quit();
     }
-
 }
