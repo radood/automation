@@ -19,9 +19,6 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by haozuo on 3/22/16.
- */
 public class ChromeDriverTest {
 
     private String testUrl;
@@ -37,8 +34,6 @@ public class ChromeDriverTest {
         testUrl = "localhost:8080";
 
         // Create a new instance of the Chrome driver
-        // Notice that the remainder of the code relies on the interface,
-        // not the implementation.
         driver = new ChromeDriver();
 
         //maximize window
@@ -53,17 +48,17 @@ public class ChromeDriverTest {
     @Test
     public void testTitle() throws IOException {
 
-        // Find elements by attribute lang="READ_MORE_BTN"
+        // Find elements by xpath
         List<WebElement> searchTab = driver
                 .findElements(By.xpath("//*[@id=\"main-navbar\"]/ul/li[3]/a/span[2]"));
 
-        //Click the selected button
+        //Click the selected tab button
         searchTab.get(0).click();
 
         List<WebElement> searchButton = driver
                 .findElements(By.xpath("//*[@id=\"search-owner-form\"]/div[2]/div/button"));
         searchButton.get(0).click();
-
+        //Maven was complaining about the sleep without the try catch block
         try {
             Thread.sleep(5000);
         } 
