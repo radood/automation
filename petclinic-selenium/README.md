@@ -72,7 +72,7 @@ On Errorpage:
 
 ## Bugs found:
 
-* Create new pet page button says update pet instead of add new pet.
+* Create new pet page button says "update pet" instead of "add new pet".
 * Telephone field empty error is not caught/user friendly: "numeric value out of bounds (<10 digits>.<0 digits> expected)".
-* The valid date format is unclear. It requires exactly the format 2010/09/07 but the user is not told this anywhere or in the error message.
+* The valid date format is unclear. It requires exactly the format "2010/09/07" but the user is not told this anywhere or in the error message.
 * On the veterenarians page. "View as XMLView as JSON" are right next to each other without any spaces.
