@@ -79,7 +79,9 @@ On Errorpage:
 * Input a large number of owners and pets to see if performance of page/database is affected
 * Editing the same field for the same owner on different machines/browsers
 
-## Small demo that shows the tests do work
+## Small demo that shows the tests
+
+The screen recorder couldn't handle the automation scripts and would make my screen load way longer but I assure you all the tests work as well as the first one.
 
 ![Test demo](/petclinic-selenium/out.gif?raw=true)
 

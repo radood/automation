@@ -1,7 +1,5 @@
 package org.petclinic;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -21,13 +19,12 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-public class AddNewPetPageTest {
+public class VisitCreationPageTest {
 
     private String testUrl;
     private WebDriver driver;
-    private String name;
-    private String birthDate;
-    private String timeStamp;
+    private String date;
+    private String description;
 
     @Before
     public void prepare() {
@@ -61,41 +58,32 @@ public class AddNewPetPageTest {
         List<WebElement> firstOwner = driver.findElements(By.xpath("//*[@id=\"vets\"]/tbody/tr[1]/td[1]/a"));
          //Click the first owner
         firstOwner.get(0).click();
-
-        List<WebElement> addNewPetButton = driver.findElements(By.xpath("/html/body/div/div/a[2]"));
-         //Click the add new pet button
-        addNewPetButton.get(0).click();
-
+        List<WebElement> addVisitButton = driver.findElements(By.xpath("/html/body/div/div/table[2]/tbody/tr[1]/td[2]/table/tbody/tr/td[2]/a"));
+         //Click the add visit button
+        addVisitButton.get(0).click();
     }
 
     @Test
-    public void testCreateNewPetForOwner() {
-        timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-        
-        name = "Test Pet name" + timeStamp;
-        birthDate = "2010/09/07";
+    public void testAddVisitButton() {
 
-        //Fill up each of the text fields
-        List<WebElement> nameField = driver.findElements(By.xpath("//*[@id=\"name\"]"));
-        nameField.get(0).sendKeys(name);
+        description = "Test description";
+        date = "2010/09/07";
 
-        List<WebElement> birthDateField = driver.findElements(By.xpath("//*[@id=\"birthDate\"]"));
-        birthDateField.get(0).sendKeys(birthDate);
-        
-        //Choose the first type element
-        List<WebElement> typeField = driver.findElements(By.xpath("//*[@id=\"type\"]/option[1]"));
-        birthDateField.get(0).click();
+        List<WebElement> dateField = driver.findElements(By.xpath("//*[@id=\"date\"]"));
+        dateField.get(0).sendKeys(date);
 
-        //Click add new pet button
-        List<WebElement> addPetButton = driver.findElements(By.xpath("/html/body/div/div/form/div[2]/div/button"));
-        addPetButton.get(0).click();
+        List<WebElement> descriptionField = driver.findElements(By.xpath("//*[@id=\"description\"]"));
+        descriptionField.get(0).sendKeys(description);
+
+        List<WebElement> addVisit = driver.findElements(By.xpath("/html/body/div/div/form/div[2]/div/button"));
+        addVisit.get(0).click();
     }
 
     @After
     public void teardown() throws IOException {
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } 
         catch(InterruptedException e){
              // this part is executed when an exception (in this example InterruptedException) occurs

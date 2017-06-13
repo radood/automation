@@ -91,8 +91,6 @@ public class OwnerProfilePageTest {
         addVisitButton.get(0).click();
     }
 
-
-
     
     @After
     public void teardown() throws IOException {
