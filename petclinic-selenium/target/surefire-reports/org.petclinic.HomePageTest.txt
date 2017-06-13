@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: org.petclinic.OwnerProfilePageTest
+Test set: org.petclinic.HomePageTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.748 sec - in org.petclinic.OwnerProfilePageTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.989 sec - in org.petclinic.HomePageTest

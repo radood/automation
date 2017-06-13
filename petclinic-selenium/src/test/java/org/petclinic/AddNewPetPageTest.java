@@ -95,7 +95,7 @@ public class AddNewPetPageTest {
     public void teardown() throws IOException {
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } 
         catch(InterruptedException e){
              // this part is executed when an exception (in this example InterruptedException) occurs

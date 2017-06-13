@@ -1,5 +1,8 @@
+/home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/VeterinariansPageTest.java
 /home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/FindOwnersPageTest.java
 /home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/AddNewPetPageTest.java
+/home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/ErrorPageTest.java
 /home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/OwnerProfilePageTest.java
 /home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/AddNewOwnerPageTest.java
 /home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/VisitCreationPageTest.java
+/home/radood/automation/petclinic-selenium/src/test/java/org/petclinic/HomePageTest.java

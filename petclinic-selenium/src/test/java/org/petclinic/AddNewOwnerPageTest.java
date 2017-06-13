@@ -101,7 +101,7 @@ public class AddNewOwnerPageTest {
  @After
     public void teardown() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } 
         catch(InterruptedException e){
              // this part is executed when an exception (in this example InterruptedException) occurs

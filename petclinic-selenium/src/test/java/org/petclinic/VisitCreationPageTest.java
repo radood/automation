@@ -70,6 +70,8 @@ public class VisitCreationPageTest {
         date = "2010/09/07";
 
         List<WebElement> dateField = driver.findElements(By.xpath("//*[@id=\"date\"]"));
+        //It prepopulates with current date so clear that
+        dateField.get(0).clear();
         dateField.get(0).sendKeys(date);
 
         List<WebElement> descriptionField = driver.findElements(By.xpath("//*[@id=\"description\"]"));

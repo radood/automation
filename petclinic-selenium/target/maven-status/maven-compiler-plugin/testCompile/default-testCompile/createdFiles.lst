@@ -1,5 +1,8 @@
-org/petclinic/OwnerProfilePageTest.class
-org/petclinic/FindOwnersPageTest.class
 org/petclinic/VisitCreationPageTest.class
 org/petclinic/AddNewOwnerPageTest.class
 org/petclinic/AddNewPetPageTest.class
+org/petclinic/HomePageTest.class
+org/petclinic/OwnerProfilePageTest.class
+org/petclinic/VeterinariansPageTest.class
+org/petclinic/FindOwnersPageTest.class
+org/petclinic/ErrorPageTest.class

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.petclinic.AddNewPetPageTest" time="4.046" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="org.petclinic.VeterinariansPageTest" time="6.562" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -14,6 +14,7 @@
     <property name="user.country" value="CA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="VeterinariansPageTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/radood/automation/petclinic-selenium"/>
     <property name="java.runtime.version" value="1.8.0_131-8u131-b11-0ubuntu1.17.04.1-b11"/>
@@ -34,14 +35,14 @@
     <property name="user.home" value="/home/radood"/>
     <property name="user.timezone" value="America/Vancouver"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="radood"/>
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=VeterinariansPageTest test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -59,5 +60,6 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testCreateNewPetForOwner" classname="org.petclinic.AddNewPetPageTest" time="4.046"/>
+  <testcase name="viewJSONTest" classname="org.petclinic.VeterinariansPageTest" time="3.499"/>
+  <testcase name="viewXMLTest" classname="org.petclinic.VeterinariansPageTest" time="3.063"/>
 </testsuite>
